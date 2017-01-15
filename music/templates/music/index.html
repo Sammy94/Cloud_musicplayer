@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h3>My Albums</h3>
+{% load staticfiles %}
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css'  %}"/>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="{% url 'music:index' %}">Home</a>
+        </div>
+
+    </div>
+</nav>
+
+
 {% if all_albums %}
 <ul>
     {% for album in all_albums %}
